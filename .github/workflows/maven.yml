@@ -6,17 +6,18 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -29,8 +30,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Navigate to project directory
-        run: cd "AP1403 - RegEx"
-
       - name: Build and test with Maven
-        run: mvn clean test
+        run: |
+          cd "AP1403 - RegEx"
+          mvn clean test
