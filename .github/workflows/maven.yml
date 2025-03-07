@@ -30,7 +30,7 @@ jobs:
           java-version: '17'
 
       - name: Navigate to project directory
-        run: cd AP1403 - RegEx
+        run: cd "AP1403 - RegEx"
 
       - name: Build and test with Maven
         run: mvn clean test
